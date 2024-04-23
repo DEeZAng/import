@@ -2,18 +2,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: pet-deploy
-  name: pet-deploy
+    app: dorji-deploy
+  name: dorji-deploy
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: pet-deploy
+      app: dorji-deploy
   template:
     metadata:
       labels:
-        app: pet-deploy
+        app: dorji-deploy
     spec:
       containers:
-      - image: cloudsihmar/newpet:13
+      - image: dzangmo/newpet:latest
         name: pet
